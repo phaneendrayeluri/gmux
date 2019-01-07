@@ -5,8 +5,8 @@ import (
 	"net/http"
 )
 
-// ResponseWriterJSON - Adds a content-type json
-func ResponseWriterJSON(s int, resp interface{}) http.HandlerFunc {
+// ResponsdAsJSON - Adds a content-type json
+func ResponsdAsJSON(s int, resp interface{}) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		bees, err := json.Marshal(resp)
 		if err != nil {
